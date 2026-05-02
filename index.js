@@ -1,8 +1,9 @@
-import os from 'os'
-
+const os = require('os')
 const express = require('express')
+
 const app = express()
 const port = 80
+const version = "v2.0";
 
 const phrases = [
   "Get ready to be inspired…", 
@@ -16,7 +17,7 @@ const phrases = [
 
 app.get('/', (req, res) => {
   const number = Math.floor(Math.random() * 7);
-  res.send(phrases[number] + " - Container Id: "+os.hostname())
+  res.send(phrases[number] + " - Container Id: "+os.hostname() + " - Version: " + version)
 })
 
 app.listen(port, () => {
