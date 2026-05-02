@@ -3,7 +3,7 @@ const express = require('express')
 
 const app = express()
 const port = 80
-const version = "v3.0";
+const version = "v1.0";
 
 const phrases = [
   "Get ready to be inspired…", 
